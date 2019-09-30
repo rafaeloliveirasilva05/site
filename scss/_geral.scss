@@ -1,0 +1,285 @@
+
+
+/* Menu */
+.menuHeader {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, $primary-color, $black);
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  display: block;
+  max-width: 170px;
+}
+
+.menu-nav ul {
+  display: flex;
+  list-style: none;
+
+  li a {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    @include title-large($white, 1rem);
+  }
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 768px) {
+  .menuHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .menu-nav {
+    display: none;
+  }
+  .logo {
+    width: 80px;
+  }
+}
+
+/*Section Title*/
+.sectionTitle {
+  @include title-large($primary-color, 2rem);
+  @include separator($primary-color, 60px)
+}
+
+@media (max-width: 739px) {
+  .sectionTitle {
+    font-size: 1.625rem;
+  }  
+}
+
+/*Section Event*/
+.event-container {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event {
+  display: flex;
+  margin-bottom: 40px;
+
+  img {
+    width: 350px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+  }
+
+  > div {
+    width: 300px;
+    margin-left: 20px;
+    h3 {
+      margin-bottom: 15px;
+      @include title-large($black,  1.5rem)
+    }
+  }
+}
+
+.buttonLearnMoreAboutEvent {
+  @include button;
+}
+
+.buttonLearnMoreAboutEvent:hover {
+  background-color: $white;
+  color: $primary-color;
+  text-decoration: none;
+}
+
+@media (max-width: 768px){
+  .event{
+    flex-direction: column;
+
+    img {
+      width: 300px;
+    }
+
+    >div {
+      align-items: center;
+      margin-top: 15px;
+      margin-left: 0;
+      width: 300px; 
+    }
+  }
+
+  .buttonLearnMoreAboutEvent{
+    margin-top: 5px;
+    width: 300px;
+  }
+}
+
+/*Photo Gallery Section*/
+.containerPhotoGallery {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  a {
+    box-shadow: 2px 2px 8px grey;
+    color: $black
+  }
+
+  a:hover{
+    text-decoration: none;
+    color: $black
+  }
+}
+
+@media (min-width: 768px) {
+  .multi-item-carousel .carousel-inner .carousel-item {
+    margin-right: inherit;
+  }
+  
+  .multi-item-carousel .carousel-inner .carousel-item.active + .carousel-item, 
+  .multi-item-carousel .carousel-inner .carousel-item.active + .carousel-item + .carousel-item {
+    display: block;
+  }
+
+  .multi-item-carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left), .multi-item-carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item, .multi-item-carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+    transition: none;
+  }
+
+  .multi-item-carousel .carousel-inner .carousel-item.active + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.333333333333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  .multi-item-carousel .carousel-inner .carousel-item-next, 
+  .multi-item-carousel .carousel-inner .carousel-item-prev {
+    position: relative;
+    transform: translate3d(0,0,0);
+  }
+
+  .multi-item-carousel .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  .multi-item-carousel .active.carousel-item-left + .carousel-item-next.carousel-item-left, 
+  .multi-item-carousel .carousel-item-next.carousel-item-left + .carousel-item, 
+  .multi-item-carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item, .multi-item-carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%,0,0);
+    visibility: visible;
+  }
+
+  .multi-item-carousel .active.carousel-item-right + .carousel-item-prev.carousel-item-right, 
+  .multi-item-carousel .carousel-item-prev.carousel-item-right + .carousel-item, 
+  .multi-item-carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item, 
+  .multi-item-carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(100%,0,0);
+    display: block;
+    visibility: visible;
+  }
+}
+
+.photoCarouselControlButton {
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  width: 150px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+
+  a {
+    background-color: $primary-color;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+  }
+}
+
+/*Accommodation Section*/
+.containerAccommodation{
+  background: url('../img/acomodacao.png') no-repeat center center;
+  background-size: cover;
+  margin-top: 40px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 150px 0;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+.containerAccommodation div h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  @include separator($white, 20px);
+}
+
+.containerAccommodation div p {
+  font-style: italic;
+  font-size: 1.125em;
+}
+
+.buttonLearnMoreAboutUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  background-color:  #306D4F;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  margin-top: 40px;
+
+  &:hover {
+    background-color: #fff;
+    color: #306D4F;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 739px) {
+  .containerAccommodation div {
+    padding: 60px 0;
+  }
+  .containerAccommodation div h1 {
+    font-size: 1.625rem;
+  }
+}
+
+@media (max-width: 739px) {
+  .buttonLearnMoreAboutUs {
+    font-size: 1rem;
+    padding: 8px 10px
+  }
+}
+
+/*Footer*/
+footer {
+  height: 300px;
+  margin-top: 100px;
+  background: linear-gradient(to right,#000, #306D4F);
+}

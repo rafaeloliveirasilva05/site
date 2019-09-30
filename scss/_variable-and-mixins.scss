@@ -1,0 +1,40 @@
+$primary-color: #306D4F;
+$black: #000;
+$white: #FFF;
+$grey: #2a2426;
+
+@mixin title-large($color, $fontSize) {
+  color: $color;
+  font-size: $fontSize;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@mixin  separator($color, $width) {
+  &::after {
+    content: '';
+    display: block;
+    width: $width;
+    height: 4px;
+    background: $color;
+    margin: 10px auto;
+  }
+}
+
+@mixin button {
+  height: 40px;
+  width: 200px;
+  border-style: solid;
+  border-color: #306D4F;
+  background-color: #306D4F;
+  border-width: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  box-shadow: 2px 2px 2px grey;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 25px;
+}

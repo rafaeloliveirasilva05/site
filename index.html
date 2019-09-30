@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" type="text/css" href="styles/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="intermediateStyles/style.css">
+
+  <title>Casa Maluka</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light px-0 menuHeader ">
+      <div></div>
+      <a href="index.html">
+        <img class="logo" src="img/logo.png" alt="Casa Maluca">
+      </a>
+
+      <button 
+        class="navbar-toggler custom-toggler" 
+        type="button" 
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <nav class="menu-nav">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#nextEvents">eventos</a></li>
+          <li><a href="#photoGallery">galeria de fotos</a></li>
+          <li><a href="#nextEvents">quem somos</a></li>
+          <li><a href="#">contato</a></li>
+        </ul>
+      </nav>
+    </nav>
+
+    <div
+      id="navbarSupportedContent"
+      class="collapse navbar-collapse" 
+      style="
+        background-color: #306D4F;
+        position: absolute;
+        z-index: 20;
+        width: 100%;">
+
+      <ul class="navbar-nav ml-auto ">
+        <li class="nav-item mx-3">
+          <a class="nav-link" style="color: white" style="color: white" href="#">Home</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link" style="color: white" href="#photoGallery">Galeria de fotos</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link" style="color: white" href="#">Eventos</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link" style="color: white" href="#">Contato</a>
+        </li>
+      </ul>
+
+      <div class="mx-3" style=" margin-bottom: 15px">
+        <div
+          style="
+            display: flex;
+            width: 150px;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;">
+          <a href="https://www.facebook.com/casamalukapremium" target="_blank">
+            <img style="width: 30px; height: 30px;" src="img/fb-icon.png" alt="Facebook Casa Maluka">
+          </a>
+          <a href="https://www.instagram.com/casa_maluka_premium/?hl=pt-br" target="_blank">
+            <img style="width: 30px; height: 30px" src="img/instagram-icon.png" alt="Instagram Casa Maluka">
+          </a>
+          <a href="https://web.whatsapp.com/send?phone=5516992260979" target="_blank">
+            <img style="width: 30px; height: 30px" src="img/whats-icon.png" alt="Whatsapp Casa Maluka">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 p-0">
+        <div id="carouselCidades" class="carousel slide" data-ride="carousel">
+
+          <ol class="carousel-indicators">
+            <li data-target="#carouselCidades" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselCidades" data-slide-to="1"></li>
+            <li data-target="#carouselCidades" data-slide-to="2"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/casaMalukaCapa.png" style="min-height: 150px" class="d-block w-100" alt="Dublin.">
+            </div>
+            <div class="carousel-item">
+              <img src="img/fotoCapaBarretos.jpg" style="min-height: 150px" class="d-block w-100" alt="California">
+            </div>
+            <div class="carousel-item">
+              <img src="img/fotoCapaCarnaval.jpg" style="min-height: 150px" class="d-block w-100" alt="Paris">
+            </div>
+          </div>
+
+          <a class="carousel-control-prev" href="#carouselCidades" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselCidades" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nextEvents" class="event-container ">
+    <div style="text-align: center; margin-bottom: 20px;">
+      <h2 class="sectionTitle">próximo eventos</h2>
+    </div>
+
+    <div class="event">
+      <img src="img/obaFestival.jpeg" alt="">
+      <div>
+        <div>
+          <h3>BLOCO OBA 2020</h3>
+          <p>asçldjfa asdlfaskdjf alsssssssssssskdfjaalasda asdfs as asdfa ss assssssssssssssss sdfa asdfaasdf asd</p>
+        </div>
+        <a href="#" class="buttonLearnMoreAboutEvent">Saiba Mais</a>
+      </div>
+    </div>
+
+    <div class="event">
+      <img src="img/barretos.jpeg" alt="">
+      <div>
+        <div>
+          <h3>BARRETOS</h3>
+          <p>asçldjfa asdlfaskdjf alsssssssssssskdfjaalasda asdfs as asdfa ss assssssssssssssss sdfa asdfaasdf asd</p>
+        </div>
+        <a href="#" class="buttonLearnMoreAboutEvent">
+          Saiba Mais
+        </a>
+      </div>
+    </div>
+
+    <div class="event">
+      <img src="img/caldas-country.jpg" alt="">
+      <div>
+        <div>
+          <h3>caldas country</h3>
+          <p>asçldjfa asdlfaskdjf alsssssssssssskdfjaalasda asdfs as asdfa ss assssssssssssssss sdfa asdfaasdf asd</p>
+        </div>
+        <a href="#" class="buttonLearnMoreAboutEvent">
+          Saiba Mais
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="photoGallery" class="containerPhotoGallery">
+    <div class="container">
+
+      <div style="text-align: center; margin-bottom: 20px;">
+        <h2 class="sectionTitle">galeria de fotos</h2>
+      </div>
+
+      <div class="photoCarouselControlButton">
+        <a href="#theCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a href="#theCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <div class="carousel slide multi-item-carousel" id="theCarousel">
+        <div class="carousel-inner row w-100 mx-auto">
+          <div class="carousel-item active col-md-4">
+            <a class="card mb-2" href="photoGalleryBarretos2018.html">
+              <img class="card-img-top" style="height: 200px;" src="img/barretos.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Barretos 2018</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="carousel-item col-md-4">
+            <a class="card mb-2" href="photoGalleryBlockOba2018.html">
+              <img class="card-img-top" style="height: 200px;" src="img/obaFestival.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Carnaval 2018</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="carousel-item col-md-4">
+            <a class="card mb-2">
+              <img class="card-img-top" style="height: 200px;" src="img/casaMalukaCapa.png" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="carousel-item col-md-4">
+            <a class="card mb-2">
+              <img class="card-img-top" style="height: 200px;" src="img/fotoCapaCarnaval.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="containerAccommodation">
+    <div>
+      <h1>Casa Maluka<br>a melhor opção em hospendagem</h1>
+      <p>Sua festa começa aqui</p>
+      <a class="buttonLearnMoreAboutUs" href="#">Saiba mais sobre nós</a>
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
