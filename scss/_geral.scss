@@ -1,49 +1,6 @@
 
-
 /* Menu */
-.menuHeader {
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to right, $primary-color, $black);
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 20px;
-}
-
-.logo {
-  display: block;
-  max-width: 170px;
-}
-
-.menu-nav ul {
-  display: flex;
-  list-style: none;
-
-  li a {
-    display: block;
-    padding: 10px;
-    margin: 10px;
-    @include title-large($white, 1rem);
-  }
-}
-
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-@media (max-width: 768px) {
-  .menuHeader {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-  }
-  .menu-nav {
-    display: none;
-  }
-  .logo {
-    width: 80px;
-  }
-}
+@import './general/menuHeader';
 
 /*Section Title*/
 .sectionTitle {
@@ -58,7 +15,7 @@
 }
 
 /*Section Event*/
-.event-container {
+.eventContainer {
   max-width: 960px;
   margin: 0 auto;
   margin-top: 40px;
@@ -197,7 +154,6 @@
 .photoCarouselControlButton {
   display: flex;
   justify-content: space-between;
-  background-color: red;
   width: 150px;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -225,7 +181,7 @@
     background: rgba(0, 0, 0, 0.4);
     padding: 150px 0;
     text-align: center;
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -246,8 +202,8 @@
   justify-content: center;
   align-items: center;
   padding: 15px 20px;
-  background-color:  #306D4F;
-  color: #fff;
+  background-color:  $primary-color;
+  color: $white;
   border-radius: 4px;
   text-decoration: none;
   font-size: 1.125rem;
@@ -255,8 +211,8 @@
   margin-top: 40px;
 
   &:hover {
-    background-color: #fff;
-    color: #306D4F;
+    background-color: $white;
+    color: $primary-color;
     text-decoration: none;
   }
 }
@@ -281,5 +237,5 @@
 footer {
   height: 300px;
   margin-top: 100px;
-  background: linear-gradient(to right,#000, #306D4F);
+  background: linear-gradient(to right, $black, $primary-color);
 }

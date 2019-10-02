@@ -53,6 +53,7 @@ table {
 }
 
 /* Menu */
+/* Menu */
 .menuHeader {
   display: flex;
   flex-direction: column;
@@ -122,7 +123,7 @@ table {
   }
 }
 /*Section Event*/
-.event-container {
+.eventContainer {
   max-width: 960px;
   margin: 0 auto;
   margin-top: 40px;
@@ -270,7 +271,6 @@ table {
 .photoCarouselControlButton {
   display: flex;
   justify-content: space-between;
-  background-color: red;
   width: 150px;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -297,7 +297,7 @@ table {
   background: rgba(0, 0, 0, 0.4);
   padding: 150px 0;
   text-align: center;
-  color: #fff;
+  color: #FFF;
 }
 
 .containerAccommodation div h1 {
@@ -325,7 +325,7 @@ table {
   align-items: center;
   padding: 15px 20px;
   background-color: #306D4F;
-  color: #fff;
+  color: #FFF;
   border-radius: 4px;
   text-decoration: none;
   font-size: 1.125rem;
@@ -333,7 +333,7 @@ table {
   margin-top: 40px;
 }
 .buttonLearnMoreAboutUs:hover {
-  background-color: #fff;
+  background-color: #FFF;
   color: #306D4F;
   text-decoration: none;
 }

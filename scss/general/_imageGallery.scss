@@ -1,0 +1,59 @@
+
+.containerGallery{
+  max-width: 960px;
+  margin: 0 auto;
+
+  div {
+    display: flex;
+    margin-bottom: 15px;
+
+    img:nth-child(2){
+      margin: 0px 15px;
+    }
+  }
+}
+
+.card_img {
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .containerGallery  div {
+    margin-bottom: 4px
+  }
+  
+  .containerGallery div img:nth-child(2) {
+    margin: 0px 4px;
+  }
+}
+
+.containerModal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 20;
+  visibility: hidden;
+}
+
+.modal_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  cursor: pointer;
+}
+
+#modal_img{
+  max-height: 80vh;
+  max-width: 100vw;
+  pointer-events: none;
+  cursor: default;
+}
+
+.modal_active {
+  visibility: visible;
+}

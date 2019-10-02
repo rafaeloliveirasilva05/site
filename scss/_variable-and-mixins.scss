@@ -10,7 +10,7 @@ $grey: #2a2426;
   font-weight: bold;
 }
 
-@mixin  separator($color, $width) {
+@mixin separator($color, $width) {
   &::after {
     content: '';
     display: block;
