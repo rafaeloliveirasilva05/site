@@ -1,4 +1,4 @@
-$primary-color: #306D4F;
+$primary-color: #2C706A;
 $black: #000;
 $white: #FFF;
 $grey: #2a2426;
@@ -7,7 +7,6 @@ $grey: #2a2426;
   color: $color;
   font-size: $fontSize;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 @mixin separator($color, $width) {
