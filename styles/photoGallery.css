@@ -53,7 +53,7 @@ table {
 }
 
 /* Menu */
-/* Menu */
+/****************************************  Menu  *********************************************************/
 .menuHeader {
   display: flex;
   flex-direction: column;
@@ -81,15 +81,26 @@ table {
   text-transform: uppercase;
 }
 
+.navbar-toggler {
+  padding: 0;
+  font-size: 1rem;
+  border: 0px;
+}
+
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 @media (max-width: 768px) {
   .menuHeader {
+    position: fixed;
+    top: 0;
+    transform: translateY(0px);
+    width: 100vw;
+    z-index: 20;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
+    padding: 8px 20px;
+    transition: transform 0.3s ease;
   }
 
   .menu-nav {
@@ -97,7 +108,7 @@ table {
   }
 
   .logo {
-    width: 80px;
+    width: 45px;
   }
 }
 body {
