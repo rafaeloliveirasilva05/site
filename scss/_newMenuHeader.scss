@@ -1,0 +1,222 @@
+header {
+  height: 160px;
+  width: 100%;
+  position: absolute;
+}
+
+.newContainerHeader {
+  // background-color: red;
+  padding: 20px 20px;
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  height: 100%;
+}
+
+.menu-nav ul {
+  display: flex;
+  list-style: none;
+
+  li a {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    @include title-large($white, 1rem);
+  }
+}
+
+.headerBackgroundImage {
+  background-image: url('../img/blocoOba19/carna_8.jpg');
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  div {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: $white;
+  }
+}
+
+.headerBackgroundImage div h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  @include separator($white, 20px);
+}
+
+.headerBackgroundImage div p {
+  font-style: italic;
+  font-size: 1.125em;
+}
+
+@media (max-width: 768px) {
+  header{
+    height: 100px;
+  }
+
+  .newContainerHeader{
+    padding: 20px 15px;
+    // background: linear-gradient(to right, $primary-color, $black);
+  }
+
+  .headerBackgroundImage div h1 {
+    font-size: 1.625rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuHeader {
+    position: fixed;
+    top: 0;
+    transform: translateY(0px);
+    width: 100vw;
+    z-index: 20;
+    flex-direction: row;
+    padding: 8px 20px;
+    transition: transform 0.3s ease
+  }
+  .menu-nav {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+.burgerMenuButton{
+  width: 30px;
+  background-color: rgba(0, 0, 0, 0);
+
+  div {
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .burgerMenuButton{
+    display: none;
+  }
+}
+
+.modal-container{
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  padding: 30px;
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  transform: translateX(-100%);
+  transition: 0.5s all ease;
+}
+
+.modal-container.show-modal{
+  transform: translateX(0);
+}
+
+.modal-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.modal-container ul li {
+  width: 100%;
+  text-align: center;
+}
+
+.modal-container ul li a {
+  font-size: 34px;
+  font-weight: bold;
+  color: black;
+}
+
+.modal-container ul li::after{
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 15px auto;
+}
+
+.containerButtonCloseModal{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonCloseModal{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+.buttonLearnMoreAboutUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  background-color:  $primary-color;
+  color: $white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  margin-top: 40px;
+
+  &:hover {
+    background-color: $white;
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 739px) {
+  .containerAccommodation div {
+    padding: 60px 0;
+  }
+  .containerAccommodation div h1 {
+    font-size: 1.625rem;
+  }
+}
+
+@media (max-width: 739px) {
+  .buttonLearnMoreAboutUs {
+    font-size: 1rem;
+    padding: 8px 10px
+  }
+}

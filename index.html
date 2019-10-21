@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <header>
+  <!-- <header>
     <nav class="navbar navbar-expand-md navbar-light menuHeader ">
       <a href="index.html">
         <img class="logo" src="img/logo.png" alt="Casa Maluca">
@@ -85,10 +85,39 @@
         </div>
       </div>
     </div>
+  </header> -->
 
+  <header >
+    <div class="newContainerHeader">
+      <img class="logo" src="./img/logo.png" alt="">
+      
+      <div class="burgerMenuButton">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <nav class="menu-nav">
+        <ul>
+          <li><a href="#nextEvents">eventos</a></li>
+          <li><a href="#photoGallery">galeria de fotos</a></li>
+          <li><a href="#nextEvents">quem somos</a></li>
+          <li><a href="#">contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="container-fluid mainCarouselContainer">
+  <div class="headerBackgroundImage">
+    <div>
+      <h1>Casa Maluka<br>a melhor opção em hospendagem</h1>
+      <p>Sua festa começa aqui</p>
+      <a class="buttonLearnMoreAboutUs" href="#">Saiba mais</a>
+    </div>
+  </div>
+
+
+  <!-- <section class="container-fluid mainCarouselContainer">
     <div class="row">
       <div class="col-lg-12 p-0">
         <div id="carouselCidades" class="carousel slide" data-ride="carousel">
@@ -121,6 +150,14 @@
           </a>
         </div>
       </div>
+    </div>
+  </section> -->
+
+  <section class="containerAccommodation">
+    <div>
+      <h1>Casa Maluka<br>a melhor opção em hospendagem</h1>
+      <p>Sua festa começa aqui</p>
+      <a class="buttonLearnMoreAboutUs" href="#">Saiba mais sobre nós</a>
     </div>
   </section>
 
@@ -237,19 +274,50 @@
     </div>
   </section>
 
-  <section class="containerAccommodation">
-    <div>
-      <h1>Casa Maluka<br>a melhor opção em hospendagem</h1>
-      <p>Sua festa começa aqui</p>
-      <a class="buttonLearnMoreAboutUs" href="#">Saiba mais sobre nós</a>
-    </div>
-  </section>
-
   <footer></footer>
+
+  <div id="modal-menu" class="modal-container">
+    <div class="containerButtonCloseModal">
+      <div class="buttonCloseModal">x</div>
+    </div>
+   
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#photoGallery">Galeria de fotos</a>
+      </li>
+      <li>
+        <a href="#">Eventos</a>
+      </li>
+      <li>
+        <a href="#">Contato</a>
+      </li>
+    </ul>
+
+    <div
+      style="
+        display: flex;
+        width: 150px;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;">
+      <a href="https://www.facebook.com/casamalukapremium" target="_blank">
+        <img style="width: 30px; height: 30px;" src="img/socialMedia/fb-icon.png" alt="Facebook Casa Maluka">
+      </a>
+      <a href="https://www.instagram.com/casa_maluka_premium/?hl=pt-br" target="_blank">
+        <img style="width: 30px; height: 30px" src="img/socialMedia/instagram-icon.png" alt="Instagram Casa Maluka">
+      </a>
+      <a href="https://web.whatsapp.com/send?phone=5516992260979" target="_blank">
+        <img style="width: 30px; height: 30px" src="img/socialMedia/whats-icon.png" alt="Whatsapp Casa Maluka">
+      </a>
+    </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>

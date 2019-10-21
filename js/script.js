@@ -66,3 +66,19 @@ headerDisplayControl = () => {
 }
 
 window.addEventListener('scroll', getScroll, false)
+
+function startModal() {
+  const modal = document.getElementById('modal-menu')
+  if (modal) {
+    modal.classList.add('show-modal')
+    modal.addEventListener('click', (e) => {
+      
+      if (e.target.className === 'buttonCloseModal') {
+        modal.classList.remove('show-modal')
+      }
+    })
+  }
+}
+
+const burgerButton = document.querySelector('.burgerMenuButton')
+burgerButton.addEventListener('click', () => startModal())
