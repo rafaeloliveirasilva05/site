@@ -2,10 +2,11 @@ header {
   height: 160px;
   width: 100%;
   position: absolute;
+  top: 0;
+  z-index: 1000;
 }
 
 .newContainerHeader {
-  // background-color: red;
   padding: 20px 20px;
   max-width: 1000px;
   height: 100%;
@@ -13,6 +14,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .newContainerHeader{
+    padding: 20px 15px;
+    // background: linear-gradient(to right, $primary-color, $black);
+  }
 }
 
 .logo{
@@ -28,54 +36,6 @@ header {
     padding: 10px;
     margin: 10px;
     @include title-large($white, 1rem);
-  }
-}
-
-.headerBackgroundImage {
-  background-image: url('../img/blocoOba19/carna_8.jpg');
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  display: block;
-
-  div {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.4);
-    text-align: center;
-    color: $white;
-  }
-}
-
-.headerBackgroundImage div h1 {
-  text-transform: uppercase;
-  font-size: 3rem;
-  font-weight: bold;
-  @include separator($white, 20px);
-}
-
-.headerBackgroundImage div p {
-  font-style: italic;
-  font-size: 1.125em;
-}
-
-@media (max-width: 768px) {
-  header{
-    height: 100px;
-  }
-
-  .newContainerHeader{
-    padding: 20px 15px;
-    // background: linear-gradient(to right, $primary-color, $black);
-  }
-
-  .headerBackgroundImage div h1 {
-    font-size: 1.625rem;
   }
 }
 
@@ -95,14 +55,7 @@ header {
   }
 }
 
-
-
-
-
-
-
-
-
+/************ Button Menu burguer ***********/
 .burgerMenuButton{
   width: 30px;
   background-color: rgba(0, 0, 0, 0);
@@ -120,6 +73,7 @@ header {
   }
 }
 
+/************ Modal Menu *****************/
 .modal-container{
   height: 100vh;
   width: 100vw;
@@ -177,14 +131,7 @@ header {
   font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
+/************ Button Learn More About Us ***********/
 .buttonLearnMoreAboutUs {
   display: flex;
   justify-content: center;
@@ -220,3 +167,134 @@ header {
     padding: 8px 10px
   }
 }
+
+/**************** Image Carouseul ***********************/
+.gallery{
+  // height: calc(100vw / 2);
+  height:100vh;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery__item {
+  top: 0;
+  transition: 1s all ease;
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: $white;
+  }
+}
+
+.gallery__item div h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  @include separator($white, 20px);
+}
+
+.gallery__item div p {
+  font-style: italic;
+  font-size: 1.125em;
+}
+
+@media (max-width: 768px) {
+  header{
+    height: 100px;
+  }
+
+  .gallery__item div h1 {
+    font-size: 1.625rem;
+  }
+}
+
+/***************************  Images Background ***************************************/
+.gallery__item_1 {
+  background-image: url('../img/blocoOba19/carna_11.jpg');
+}
+
+.gallery__item_2 {
+  background-image: url('../img/blocoOba19/carna_8.jpg');
+}
+
+.gallery__item_3 {
+  background-image: url('../img/blocoOba19/carna_13.jpg');
+}
+
+.gallery__item_4 {
+  background-image: url('../img/blocoOba19/carna_5.jpg');
+}
+
+.gallery__item_5 {
+  background-image: url('../img/blocoOba19/carna_4.jpg');
+}
+
+.gallery__item:nth-child(1) {
+  left: 0;
+  transform: translateX(-100%)
+}
+
+.gallery__item:nth-child(2) {
+  left: 0;
+  transform: translateX(0%);
+}
+
+.gallery__item:nth-child(3) {
+  left: 0;
+  transform: translateX(100%);
+}
+
+.gallery__item:nth-child(4) {
+  left: 0;
+  transform: translateX(200%);
+}
+
+.gallery__item:nth-child(n+5) {
+  left: 100%;
+}
+
+/****************  Button Control Carousel *************************/
+.button_control {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height:100%;
+}
+
+.button_gallery {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 40px;
+}
+
+.button_gallery:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery__prev{
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.gallery__next{
+  background-color: rgba(0, 0, 0, 0.4)
+}
+

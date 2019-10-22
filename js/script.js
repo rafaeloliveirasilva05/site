@@ -45,34 +45,13 @@ function scrollToPosition(to) {
   })
 }
 
-getScroll = () => {
-  headerDisplayControl()
-}
-
-headerDisplayControl = () => {
-  const hideHeader = 'transform: translateY(-61px)'
-  const showHeader = 'transform: translateY(0)'
-
-  if (pageYOffset <= 200) {
-    header.style = showHeader
-    return
-  }
-
-  if (pageYOffset === lastScrollTop) return
-
-  header.style = pageYOffset > lastScrollTop ? hideHeader : showHeader
-
-  lastScrollTop = pageYOffset
-}
-
-window.addEventListener('scroll', getScroll, false)
-
+/*Modal display control*/
 function startModal() {
   const modal = document.getElementById('modal-menu')
   if (modal) {
     modal.classList.add('show-modal')
     modal.addEventListener('click', (e) => {
-      
+
       if (e.target.className === 'buttonCloseModal') {
         modal.classList.remove('show-modal')
       }
@@ -82,3 +61,28 @@ function startModal() {
 
 const burgerButton = document.querySelector('.burgerMenuButton')
 burgerButton.addEventListener('click', () => startModal())
+
+/*Close modal when clicking on a navigation element*/
+const modalNav = document.querySelectorAll('.modal-container nav ul li a')
+modalNav.forEach(element => {
+  element.addEventListener('click', () =>  {
+    const modal = document.getElementById('modal-menu')
+    modal.classList.remove('show-modal')
+  })
+})
+
+/*Carousel control*/
+let stream = document.querySelector('.gallery__stream');
+let items = document.querySelectorAll('.gallery__item');
+let prev = document.querySelector('.gallery__prev');
+let next = document.querySelector('.gallery__next');
+
+next.addEventListener('click', () => {
+  stream.insertBefore(items[items.length - 1], items[0]);
+  items = document.querySelectorAll('.gallery__item');
+})
+
+prev.addEventListener('click', () => {
+  stream.appendChild(items[0]);
+  items = document.querySelectorAll('.gallery__item');
+})
