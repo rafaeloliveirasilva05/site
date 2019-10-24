@@ -1,26 +1,4 @@
-// Developed at agap2
-// Based on:
-// http://www.codeply.com/go/s3I9ivCBYH/multi-carousel-single-slide-bootstrap-4
-
 const menuItems = document.querySelectorAll('.menu-nav ul li a')
-const header = document.querySelector('.menuHeader')
-
-let lastScrollTop = 0
-
-$('.multi-item-carousel').on('slide.bs.carousel', function (e) {
-  let $e = $(e.relatedTarget),
-    itemsPerSlide = 3,
-    totalItems = $('.carousel-item', this).length,
-    $itemsContainer = $('.carousel-inner', this),
-    it = itemsPerSlide - (totalItems - $e.index());
-  if (it > 0) {
-    for (var i = 0; i < it; i++) {
-      $('.carousel-item', this).eq(e.direction == "left" ? i : 0).
-        // append slides to the end/beginning
-        appendTo($itemsContainer);
-    }
-  }
-})
 
 menuItems.forEach(item => {
   item.addEventListener('click', scrollToIdOnClick)
@@ -86,3 +64,34 @@ prev.addEventListener('click', () => {
   stream.appendChild(items[0]);
   items = document.querySelectorAll('.gallery__item');
 })
+
+$('.photo-gallery').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+     
+	
