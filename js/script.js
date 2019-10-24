@@ -56,12 +56,12 @@ let prev = document.querySelector('.gallery__prev');
 let next = document.querySelector('.gallery__next');
 
 next.addEventListener('click', () => {
-  stream.insertBefore(items[items.length - 1], items[0]);
+  stream.appendChild(items[0]);
   items = document.querySelectorAll('.gallery__item');
 })
 
 prev.addEventListener('click', () => {
-  stream.appendChild(items[0]);
+  stream.insertBefore(items[items.length - 1], items[0]);
   items = document.querySelectorAll('.gallery__item');
 })
 

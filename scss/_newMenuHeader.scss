@@ -278,22 +278,34 @@ header {
 }
 
 .button_gallery {
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   cursor: pointer;
-  margin: 0 40px;
+  margin: 0 80px;
+  background-color: rgba(0, 0, 0, 0.4)
 }
 
 .button_gallery:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .gallery__prev{
-  background-color: rgba(0, 0, 0, 0.4);
+  background-image: url('../img/icons/iconBackWhite.png');
+  background-size: cover;
 }
 
 .gallery__next{
-  background-color: rgba(0, 0, 0, 0.4)
+  background-image: url('../img/icons/iconNextWhite.png');
+  background-size: cover;
+}
+
+@media (max-width: 739px) {
+  .button_gallery {
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+    background-size: 30px;
+  }
 }
 

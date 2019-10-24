@@ -112,7 +112,7 @@ body {
 
 .photo-gallery {
   max-width: 1200px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .titlePhotoGallery {
@@ -130,7 +130,7 @@ body {
   border-radius: 8px;
   margin:  0 10px;
   background-color: #f1eff2;
-  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .cardPhotoGallery div {
@@ -140,6 +140,7 @@ body {
     font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
+    color: $black;
   }
 }
 
@@ -155,33 +156,39 @@ body {
 }
 
 button.slick-prev {
-  height: 25px;
-  width: 25px;
+  height: 50px;
+  width: 50px;
   font-size: 0;
   border: none;
-  background-color: transparent;
-  background-image: url('../img/icons/iconBack.png');
-  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  background-image: url('../img/icons/iconBackBlack.png') ;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 20px;
   background-position: center;
   position: absolute;
   z-index: 2;
   top: 150px;
-  left: -30px;
+  left: -60px;
 }
 
 button.slick-next {
-  height: 25px;
-  width: 25px;
+  height: 50px;
+  width: 50px;
   font-size: 0;
   border: none;
-  background-color: transparent;
-  background-image: url('../img/icons/iconNextMin.png');
-  background-size: cover;
-  background-position: center;
+  border-radius: 50%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  background-image: url('../img/icons/iconNextBlack.png');
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center center;
   position: absolute;
   z-index: 2;
   top: 150px;
-  right: -30px;
+  right: -60px;
 }
 
 .slick-dots li button {
@@ -210,10 +217,20 @@ li.slick-active button {
 
 @media (max-width: 739px) {
   button.slick-next {
+    height: 30px;
+    width: 30px;
+    background-size: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: url('../img/icons/iconNextWhite.png');
     right: 20px;
   }
 
   button.slick-prev {
+    height: 30px;
+    width: 30px;
+    background-size: 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: url('../img/icons/iconBackWhite.png');
     left: 20px;
   }
 }
