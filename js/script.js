@@ -43,7 +43,7 @@ burgerButton.addEventListener('click', () => startModal())
 /*Close modal when clicking on a navigation element*/
 const modalNav = document.querySelectorAll('.modal-container nav ul li a')
 modalNav.forEach(element => {
-  element.addEventListener('click', () =>  {
+  element.addEventListener('click', () => {
     const modal = document.getElementById('modal-menu')
     modal.classList.remove('show-modal')
   })
@@ -92,6 +92,18 @@ $('.photo-gallery').slick({
       }
     }
   ]
-});
-     
-	
+})
+
+
+/*Function applied to scroll the screen to the top*/
+let backTopButton = document.querySelector('.backTopButton')
+window.addEventListener('scroll', (e) => {
+  backTopButton.style = window.scrollY > 100 ? 'display: inline' : 'display: none'
+})
+
+backTopButton.addEventListener('click', () => {
+  window.scroll({
+    top: 0,
+    behavior: "smooth"
+  })
+})

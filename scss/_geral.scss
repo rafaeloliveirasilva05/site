@@ -314,3 +314,32 @@ footer {
   // background: linear-gradient(to right, $black, $primary-color);
   background: url('../img/backgroundFooter.png');
 }
+
+
+.backTopButton{
+  display: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: url('../img/icons/iconTop.png');
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  z-index: 2000;
+}
+
+.backTopButton:hover{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .backTopButton{
+    height: 40px;
+    width: 40px;
+  }
+}
