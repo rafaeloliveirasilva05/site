@@ -33,6 +33,8 @@ $img.forEach((element, index) => {
   })
 })
 
-modal_content.addEventListener('click', function() {
-  modal.classList.toggle('modal_active')
+modal_content.addEventListener('click', function(e) {
+  if(e.target.classList[0] ==='modal_content'){
+    modal.classList.toggle('modal_active')
+  }
 })
