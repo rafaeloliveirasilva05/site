@@ -13,7 +13,7 @@ h1 {
     padding: 15px 0;
   }
   section{
-    margin-top: 61px
+    // margin-top: 61px
   }
 }
 
@@ -63,7 +63,33 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100vw;
+}
+
+.closeButton{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-image: url('../../img/icons/iconCloseWhite.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center center;
+  position: absolute;
+  top: 20px;
+  right: 40px;
   cursor: pointer;
+}
+
+.closeButton:hover{
+  background-color: #000
+}
+
+@media(max-width: 760px) {
+  .closeButton{
+    top: 10px;
+    right: 10px;
+    background-size: 15px;
+  }
 }
 
 #modal_img{
@@ -72,6 +98,54 @@ h1 {
   cursor: default;
 }
 
+.selectedImageContainer{
+  background-color: black;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: default;
+}
+
 .modal_active {
   visibility: visible;
+}
+
+.containerButtonControl{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.buttonControl {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position-y: 50%;
+  cursor: pointer;
+}
+
+.buttonNext{
+  right: 0;
+  justify-content: flex-end;
+  background-image: url('../../img/icons/iconNextWhite.png');
+  background-position-x: 100%;
+}
+
+.buttonBack{
+  justify-content: flex-start;
+  background-image: url('../../img/icons/iconBackWhite.png');
+}
+
+@media (max-width: 760px) {
+  .buttonControl{
+    background-size: 40px;
+  }
 }
