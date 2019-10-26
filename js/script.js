@@ -1,6 +1,11 @@
 const menuItems = document.querySelectorAll('.menu-nav ul li a')
+const menuItemsFooter = document.querySelectorAll('.menu-footer nav ul li a')
 
 menuItems.forEach(item => {
+  item.addEventListener('click', scrollToIdOnClick)
+})
+
+menuItemsFooter.forEach(item => {
   item.addEventListener('click', scrollToIdOnClick)
 })
 
@@ -11,7 +16,7 @@ function getScrollTopByHref(element) {
 
 function scrollToIdOnClick(event) {
   event.preventDefault() // previne o valor padrão
-  const to = getScrollTopByHref(event.target) + 40
+  const to = getScrollTopByHref(event.target)
 
   scrollToPosition(to)
 }
@@ -93,7 +98,6 @@ $('.photo-gallery').slick({
     }
   ]
 })
-
 
 /*Function applied to scroll the screen to the top*/
 let backTopButton = document.querySelector('.backTopButton')

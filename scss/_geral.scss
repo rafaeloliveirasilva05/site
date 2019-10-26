@@ -310,12 +310,101 @@ li.slick-active button {
 
 /****************************************  Footer  ******************************************************/
 footer {
-  height: 400px;
-  // background: linear-gradient(to right, $black, $primary-color);
   background: url('../img/backgroundFooter.png');
+  display: flex;
+}
+
+.container-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: flex;
+  color: white;
+}
+
+@media (max-width: 760px){
+  .container-footer{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+  }
+}
+
+.container-footer h5 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.container-footer ul li{
+  margin-bottom: 5px;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.container-footer ul li a{
+  color: white;
+}
+
+.container-footer ul li a:hover{
+  font-size: 20px;
+  text-decoration: none;
 }
 
 
+.logo-footer{
+  width: 280px;
+  margin: 0 10px;
+}
+
+.logo-footer img {
+  height: 200px;
+  width: 200px;
+}
+
+@media (max-width: 760px){
+  .logo-footer img{
+    height: 140px;
+    width: 140px;
+  }
+}
+
+.menu-footer{
+  width: 280px;
+  margin: 0 10px;
+
+  margin-top: 30px;
+}
+
+.contact-footer{
+  width: 280px;
+  margin: 0 10px;
+  margin-top: 30px;
+}
+
+.social-media-footer {
+  width: 280px;
+  margin: 0 10px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media-footer div{
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media-footer div a img {
+  width: 30px;
+  height: 30px;
+}
+
+/****************************************  Back Top Button  ******************************************************/
 .backTopButton{
   display: none;
   height: 60px;
